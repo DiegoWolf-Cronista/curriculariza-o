@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Jogo Brusque</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TELA INICIAL -->
+<div id="inicio" class="tela ativa">
+    <h1>A História de Brusque</h1>
+    <button onclick="iniciarJogo()">Iniciar</button>
+</div>
+
+<!-- LOGIN -->
+<div id="login" class="tela">
+    <h2>Olá amiguinho!</h2>
+    <input type="text" id="nome" placeholder="Seu nome"><br>
+    <input type="text" placeholder="Sua escola"><br>
+    <input type="number" placeholder="Sua idade"><br>
+    <button onclick="comecar()">Entrar na aventura</button>
+</div>
+
+<!-- PERGUNTA -->
+<div id="quiz" class="tela">
+    <h2 id="pergunta"></h2>
+    <div id="respostas"></div>
+</div>
+
+<!-- FEEDBACK -->
+<div id="feedback" class="tela">
+    <h2 id="mensagem"></h2>
+    <button onclick="proximaPergunta()">Continuar</button>
+</div>
+
+<div id="final" class="tela">
+    <h2 id="resultadoFinal"></h2>
+    <button onclick="reiniciar()">Jogar novamente</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
