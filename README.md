@@ -12,47 +12,48 @@ Linguagens usadas: Foram utilizados como linguagens principais:
   CSS: Incluido no projeto para permitir um melhor estilo, cores, posicionamento e etc.
 
 Perguntas:
+
     1) Qual dessas imagens está o fundador de  Brusque? (Falas trasmitida por audio)
     A) Pocoyo (Falas trasmitida por audio)
     B) Maximilian von Schneeburg (X) (Falas trasmitida por audio)
 
-   2) Brusque é conhecida por produzir muito que tipo de coisa (ela é conhecida por ser capital do que)?
-   A) Sapatos
-   B) Roupas e tecidos (Têxtil) X
+    2) Brusque é conhecida por produzir muito que tipo de coisa (ela é conhecida por ser capital do que)?
+    A) Sapatos
+    B) Roupas e tecidos (Têxtil) X
 
-   3) Qual destes personagens fazem parte da fenarreco? a maior festa de brusque!. (Falas trasmitida por audio)
-   A) pelznickel (Falas trasmitida por audio)
-   B) Marrequinho X (Falas trasmitida por audio)
+    3) Qual destes personagens fazem parte da fenarreco? a maior festa de brusque!. (Falas trasmitida por audio)
+    A) pelznickel (Falas trasmitida por audio)
+    B) Marrequinho X (Falas trasmitida por audio)
 
-   4)Em qual estado do Brasil fica a cidade de Brusque? (Falas trasmitida por audio)
+    4)Em qual estado do Brasil fica a cidade de Brusque? (Falas trasmitida por audio)
     (imagem do Parana, Santa Catarina e Rio Grande do Sul)
 
-   5) As pessoas que nascem em Brusque costumam ser chamadas de que ? (Falas trasmitida por audio)
-   A) Batistense (Falas trasmitida por audio)
-   B) Trentino (Falas trasmitida por audio)
-   C) Alemão (Falas trasmitida por audio)
-   D) Brusquense X (Falas trasmitida por audio)
+    5) As pessoas que nascem em Brusque costumam ser chamadas de que ? (Falas trasmitida por audio)
+    A) Batistense (Falas trasmitida por audio)
+    B) Trentino (Falas trasmitida por audio)
+    C) Alemão (Falas trasmitida por audio)
+    D) Brusquense X (Falas trasmitida por audio)
 
-   6) Brusque tem um time de futebol, qual a imagem é a do brusque futebol clube ?
-   (imagem do time)
-   A) Flamengo
-   B) Brusque Futebol Clube X
+    6) Brusque tem um time de futebol, qual a imagem é a do brusque futebol clube ?
+    (imagem do time)
+    A) Flamengo
+    B) Brusque Futebol Clube X
 
-   8) Qual dessas instituições de ensino está em Brusque?
-   (imagens das duas instiruições)
-   A) Centro Universitário da Fundação Educacional de Brusque (UNIFEBE) X
-   B) Universidade Federal de Santa Catarina (UFSC)
+    8) Qual dessas instituições de ensino está em Brusque?
+    (imagens das duas instiruições)
+    A) Centro Universitário da Fundação Educacional de Brusque (UNIFEBE) X
+    B) Universidade Federal de Santa Catarina (UFSC)
 
-   9) Qual dessas bandeiras é a de Brusque?
-   (imagens das bandeiras)
-   A) Brusque (X)
-   B) Japão
+    9) Qual dessas bandeiras é a de Brusque?
+    (imagens das bandeiras)
+    A) Brusque (X)
+    B) Japão
 
-   10) Qual destas imagens representa uma comida típica de Brusque?
-   (Imagem de uma Cuca)
-   A) Sushi
-   B) Cuca X
-   C) hot-dog
+    10) Qual destas imagens representa uma comida típica de Brusque?
+    (Imagem de uma Cuca)
+    A) Sushi
+    B) Cuca X
+    C) hot-dog
 
     11) Essa é a entrada do Parque Zoobotânico de Brusque ?
     (imagem do Parque)
