@@ -8,7 +8,7 @@ Grupo 20:
 
 > Jeferson Koerich
 
-> Link do figma: https://www.figma.com/proto/4HMItAcal7Ydp4ZnGvOIBX/Curriculariza%C3%A7%C3%A3o?node-id=69-64&t=jK3aGfham4DTTsei-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2
+> Link do figma: https://www.figma.com/proto/4HMItAcal7Ydp4ZnGvOIBX/Curricularização?node-id=1-2&t=jK3aGfham4DTTsei-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2
 
 Linguagens usadas: Foram utilizados como linguagens principais:
 
@@ -47,44 +47,44 @@ Perguntas:
     A) Flamengo
     B) Brusque Futebol Clube X
 
-    8) Qual dessas instituições de ensino está em Brusque?
+    7) Qual dessas instituições de ensino está em Brusque?
     (imagens das duas instituições)
     A) Centro Universitário da Fundação Educacional de Brusque (UNIFEBE) X
     B) Universidade Federal de Santa Catarina (UFSC)
 
-    9) Qual dessas bandeiras é a de Brusque?
+    8) Qual dessas bandeiras é a de Brusque?
     (imagens das bandeiras)
     A) Brusque (X)
     B) Japão
 
-    10) Qual destas imagens representa uma comida típica de Brusque?
+    9) Qual destas imagens representa uma comida típica de Brusque?
     (Imagem de uma Cuca)
     A) Sushi
     B) Cuca X
     C) hot-dog
 
-    11) Essa é a entrada do Parque Zoobotânico de Brusque ?
+    10) Essa é a entrada do Parque Zoobotânico de Brusque ?
     (imagem do Parque)
     A) Verdadeiro X
     B) Falso
 
-    12) Esse estilo de construção pertence a Brusque ?
+    11) Esse estilo de construção pertence a Brusque ?
     A) Verdadeiro X
     B) Falso
 
-    13) Essas construções são comuns em Brusque ?
+    12) Essas construções são comuns em Brusque ?
     A) São facilmente encontradas
     B) Não são X
 
-    14) Qual lugar em Brusque tem muitos animais para visitar?
+    13) Qual lugar em Brusque tem muitos animais para visitar?
     A) Zoo Botânico X
     B) Shopping
 
-    15) Em brusque existe um lugar com muitas estatuas, qual é esse lugar nas imagens?
+    14) Em brusque existe um lugar com muitas estatuas, qual é esse lugar nas imagens?
     A) Havan
     B) Parque das esculturas (X)
 
-    16) Dentro do parque das esculturas existe um instrumento que conseguimos ver as estrelas qual das imagens mostra o telescópio       de Brusque?
+    15) Dentro do parque das esculturas existe um instrumento que conseguimos ver as estrelas qual das imagens mostra o telescópio       de Brusque?
     (imagem do telescópio de Brusque)
 
 
