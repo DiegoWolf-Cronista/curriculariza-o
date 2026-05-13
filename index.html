@@ -1,43 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<title>Jogo Brusque</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Jogo Brusque</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+
 <!-- TELA INICIAL -->
-<div id="inicio" class="tela ativa">
-    <h1>A História de Brusque</h1>
-    <button onclick="iniciarJogo()">Iniciar</button>
+<div id="inicio" class="tela ativa tela-inicio">
+    <div class="conteudo-jogo inicio-conteudo">        
+        <button class="botao-jogo" onclick="iniciarJogo()">Iniciar</button>
+    </div>
 </div>
+
 
 <!-- LOGIN -->
-<div id="login" class="tela">
-    <h2>Olá amiguinho!</h2>
-    <input type="text" id="nome" placeholder="Seu nome"><br>
-    <input type="text" placeholder="Sua escola"><br>
-    <input type="number" placeholder="Sua idade"><br>
-    <button onclick="comecar()">Entrar na aventura</button>
+<div id="login" class="tela tela-login">
+    <div class="painel-jogo">
+        <h2>Olá amiguinho!</h2>
+
+
+        <input type="text" id="nome" placeholder="Seu nome">
+        <input type="text" id="escola" placeholder="Sua escola">
+        <input type="number" id="idade" placeholder="Sua idade">
+
+
+        <button class="botao-jogo" onclick="comecar()">Entrar na aventura</button>
+    </div>
 </div>
+
 
 <!-- PERGUNTA -->
-<div id="quiz" class="tela">
-    <h2 id="pergunta"></h2>
-    <div id="respostas"></div>
+<div id="quiz" class="tela tela-quiz">
+    <div class="painel-jogo painel-quiz">
+        <h2 id="pergunta"></h2>
+        <div id="respostas"></div>
+    </div>
 </div>
+
 
 <!-- FEEDBACK -->
-<div id="feedback" class="tela">
-    <h2 id="mensagem"></h2>
-    <button onclick="proximaPergunta()">Continuar</button>
+<div id="feedback" class="tela tela-feedback">
+    <div class="painel-jogo">
+        <h2 id="mensagem"></h2>
+        <button class="botao-jogo" onclick="proximaPergunta()">Continuar</button>
+    </div>
 </div>
 
-<div id="final" class="tela">
-    <h2 id="resultadoFinal"></h2>
-    <button onclick="reiniciar()">Jogar novamente</button>
+
+<!-- FINAL -->
+<div id="final" class="tela tela-final">
+    <div class="painel-jogo">
+        <h2 id="resultadoFinal"></h2>
+        <button class="botao-jogo" onclick="reiniciar()">Jogar novamente</button>
+    </div>
 </div>
+
 
 <script src="script.js"></script>
 </body>

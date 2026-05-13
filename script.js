@@ -3,18 +3,19 @@ let perguntaAtual = 0;
 let acertos = 0;
 let somAcerto = new Audio("audios/acerto.mp3");
 
+
 const perguntas = [
     {
         pergunta: "Quem foi o fundador de Brusque?",
         respostas: [
-            { texto: "Pocoyo",imagem:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSQwX7oa9w_Ymtpf-_BwOkn1I9y9FRD9AuzQ&s", correta: false },
-            { texto: "Maximilian von Schneeburg", imagem:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtsNJV7N60HIlkxQhvaJxaEWLvY-auPvOyfQ&s", correta: true }
+            { texto: "Fazendeiro",imagem:"imagens/imgQuestao1LetraA.jpeg", correta: false },
+            { texto: "Maximilian von Schneeburg", imagem:"imagens/imgQuestao1LetraB.png", correta: true }
         ]
     },
     {
         pergunta: "Brusque é conhecida por produzir o quê?",
         respostas: [
-            { texto: "Sapatos", correta: false },
+            { texto: "Sapatos",imagem:"imagens/imgquetao2letraA.png", correta: false },
             { texto: "Roupas e tecidos", correta: true }
         ]
     },
@@ -114,89 +115,120 @@ const perguntas = [
     }
 ];
 
+
 // TROCAR TELAS
 function trocarTela(id) {
     document.querySelectorAll(".tela").forEach(t => t.classList.remove("ativa"));
     document.getElementById(id).classList.add("ativa");
 }
 
+
 // INICIAR
 function iniciarJogo() {
     trocarTela("login");
 }
 
+
 // COMEÇAR QUIZ
 function comecar() {
     nomeAluno = document.getElementById("nome").value;
 
-    if (nomeAluno === "") {
-        alert("Digite seu nome!");
-        return;
-    }
+
+    // if (nomeAluno === "") {
+    //     alert("Digite seu nome!");
+    //     return;
+    // }
+
 
     perguntaAtual = 0;
-    acertos = 0; 
+    acertos = 0;
+
 
     mostrarPergunta();
     trocarTela("quiz");
 }
+
 
 // MOSTRAR PERGUNTA
 function mostrarPergunta() {
     let p = perguntas[perguntaAtual];
     document.getElementById("pergunta").innerText = p.pergunta;
 
+
     let respostasDiv = document.getElementById("respostas");
     respostasDiv.innerHTML = "";
+
 
     // REMOVE classes antigas
     respostasDiv.classList.remove("duas", "quatro");
 
+respostasDiv.className = "";
     // ADICIONA classe baseada na quantidade
-    if (p.respostas.length === 2) {
-        respostasDiv.classList.add("duas");
-    } else if (p.respostas.length === 4) {
-        respostasDiv.classList.add("quatro");
-    }
-
+if (p.respostas.length === 2) {
+    respostasDiv.classList.add("duas");
+} else if (p.respostas.length === 3) {
+    respostasDiv.classList.add("tres");
+} else if (p.respostas.length === 4) {
+    respostasDiv.classList.add("quatro");
+}
     p.respostas.forEach((resposta) => {
         let btn = document.createElement("div");
         btn.className = "resposta";
 
-        btn.innerHTML = `
-            <img src="${resposta.imagem}" class="img-resposta">
-            <p>${resposta.texto}</p>
-        `;
+
+       if (resposta.imagem) {
+    btn.innerHTML = `
+        <img src="${resposta.imagem}" class="img-resposta">
+        <p>${resposta.texto}</p>
+    `;
+} else {
+    btn.classList.add("sem-imagem");
+
+
+    btn.innerHTML = `
+        <p>${resposta.texto}</p>
+    `;
+}
+
 
         btn.onclick = () => verificarResposta(resposta.correta);
+
 
         respostasDiv.appendChild(btn);
     });
 }
 
+
 // VERIFICAR RESPOSTA
 function verificarResposta(acertou) {
+
 
     if (acertou) {
         acertos++;
 
+
         somAcerto.currentTime = 0; // reinicia som
         somAcerto.play();
 
+
         document.getElementById("mensagem").innerText =
-            nomeAluno + ", Boa!, Você acertou!!! ";
+            nomeAluno + " Boa!, Você acertou!!! ";
+
 
     } else {
         document.getElementById("mensagem").innerText =
-            nomeAluno + ", Quase!, continue tentando!!";
+            nomeAluno + " Quase!, continue tentando!!";
     }
+
 
     trocarTela("feedback");
 }
 
+
 // PRÓXIMA
 function proximaPergunta() {
     perguntaAtual++;
+
 
     if (perguntaAtual < perguntas.length) {
         mostrarPergunta();
@@ -206,12 +238,15 @@ function proximaPergunta() {
     }
 }
 
+
 function mostrarResultadoFinal() {
     document.getElementById("resultadoFinal").innerText =
-        nomeAluno + ", você acertou " + acertos + " de " + perguntas.length + " perguntas, Parabéns!!!";
+        nomeAluno + " VOCÊ ACERTOU " + acertos + " de " + perguntas.length + " perguntas, Parabéns!!!";
+
 
     trocarTela("final");
 }
+
 
 function reiniciar() {
     trocarTela("inicio");

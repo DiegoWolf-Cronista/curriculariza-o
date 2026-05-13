@@ -1,61 +1,355 @@
-body {
-    font-family: Arial;
-    text-align: center;
-    background: #f5f5f5;
+* {
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-family: 'Baloo 2', cursive;
 }
 
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Fundo geral */
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+
+/* Todas as telas ocupam a tela inteira */
 .tela {
     display: none;
-    margin-top: 50px;
-}
-
-.ativa {
-    display: block;
-}
-
-button {
-    padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
-    border-radius: 10px;
-    border: none;
-    background: green;
-    color: white;
-}
-
-.resposta {
-    display: block;
-    margin: 10px auto;
-    padding: 10px;
-    width: 200px;
-    background: #ddd;
-    border-radius: 10px;
-    cursor: pointer;
-
-    width: auto;        
-    max-width: 220px;     
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
     text-align: center;
+
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-.img-resposta {
-    width: 100%;    
-    height: auto;   
-    border-radius: 10px;
+
+/* Tela ativa aparece como flex */
+.tela.ativa {
+    display: flex;
+}
+
+
+/* Fundos por tela */
+.tela-inicio {
+    background-image: url("imagens/capaOficial.png");
+}
+
+.tela-login {
+    background-image: url("imagens/fundo-login.png");
+}
+
+.tela-quiz {
+    background-image: url("imagens/imgPerguntasFundo.png");
+}
+
+
+.tela-feedback {
+    background-image: url("imagens/imgCertoErrado.png");
+}
+
+
+.tela-final {
+    background-image: url("imagens/imgFinalJogo.png");
+}
+
+
+/* Escurece levemente o fundo para destacar os textos */
+.tela::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.20);
+    z-index: 0;
+}
+
+
+/* Conteúdo fica acima do fundo */
+.conteudo-jogo,
+.painel-jogo {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Painel estilo placa de jogo */
+.painel-jogo {
+    width: min(50%, 850px);
+    min-height: 300px;
+    padding: 35px 30px;
+
+
+    background: linear-gradient(#fff7d6, #ffd989);
+    border: 8px solid #8b4a16;
+    border-radius: 28px;
+
+
+    box-shadow:
+        0 12px 0 #5a2c0c,
+        0 20px 35px rgba(0, 0, 0, 0.35);
+
+
+    color: #4b2608;
+}
+
+
+/* Painel da pergunta um pouco maior */
+.painel-quiz {
+    width: min(95%, 1000px);
+}
+
+
+/* Título inicial */
+.inicio-conteudo {
+    margin-top: auto;
+    margin-bottom: 70px;
+}
+
+
+h1 {
+    font-size: clamp(38px, 6vw, 80px);
+    color: #fff6c7;
+    text-shadow:
+        4px 4px 0 #6b320c,
+        7px 7px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 25px;
+}
+
+
+h2 {
+    font-size: clamp(26px, 4vw, 44px);
+    margin: 0 0 25px 0;
+    color: #4b2608;
+}
+
+
+/* Inputs */
+input {
+    width: min(90%, 420px);
     display: block;
+    margin: 12px auto;
+    padding: 16px 18px;
+
+
+    border-radius: 18px;
+    border: 4px solid #8b4a16;
+
+
+    font-size: 20px;
+    text-align: center;
+    outline: none;
+
+
+    background: #fffdf0;
+    color: #4b2608;
 }
 
+
+input:focus {
+    border-color: #1fa83a;
+    box-shadow: 0 0 0 4px rgba(31, 168, 58, 0.25);
+}
+
+
+/* Botão estilo jogo */
+.botao-jogo {
+    min-width: 220px;
+    padding: 18px 35px;
+    margin-top: 20px;
+
+
+    border: 5px solid #0b6d1e;
+    border-radius: 50px;
+
+
+    background: linear-gradient(#46ff5c, #13a52c);
+    color: white;
+
+
+    font-size: 26px;
+    font-weight: bold;
+    cursor: pointer;
+
+
+    text-shadow: 2px 2px 0 #075c19;
+
+
+    box-shadow:
+        0 8px 0 #075c19,
+        0 14px 20px rgba(0, 0, 0, 0.35);
+
+
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+
+.botao-jogo:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow:
+        0 11px 0 #075c19,
+        0 18px 25px rgba(0, 0, 0, 0.4);
+}
+
+
+.botao-jogo:active {
+    transform: translateY(5px);
+    box-shadow:
+        0 3px 0 #075c19,
+        0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Área das respostas */
 #respostas {
     display: grid;
-    gap: 15px;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 20px;
+}
+
+
+/* Quando tiver 2 opções */
+#respostas.duas {
+    grid-template-columns: repeat(2, minmax(220px, 320px));
+}
+
+
+/* Quando tiver 3 opções */
+#respostas.tres {
+    grid-template-columns: repeat(3, minmax(180px, 280px));
+}
+
+
+/* Quando tiver 4 opções */
+#respostas.quatro {
+    grid-template-columns: repeat(2, minmax(220px, 320px));
+}
+
+
+/* Card da resposta */
+.resposta {
+    min-height: 120px;
+    padding: 14px;
+
+
+    background: linear-gradient(#ffffff, #ffe8a6);
+    border: 6px solid #8b4a16;
+    border-radius: 24px;
+
+
+    cursor: pointer;
+    color: #4b2608;
+
+
+    font-size: 22px;
+    font-weight: bold;
+
+
+    box-shadow:
+        0 8px 0 #5a2c0c,
+        0 15px 20px rgba(0, 0, 0, 0.25);
+
+
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+
+.resposta:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow:
+        0 12px 0 #5a2c0c,
+        0 18px 25px rgba(0, 0, 0, 0.35);
+}
+
+
+.resposta:active {
+    transform: translateY(5px);
+    box-shadow:
+        0 3px 0 #5a2c0c,
+        0 8px 12px rgba(0, 0, 0, 0.25);
+}
+
+
+.resposta p {
+    margin: 10px 0 0 0;
+}
+
+
+/* Imagem dentro da resposta */
+.img-resposta {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
+    border: 3px solid #ffffff;
+}
+
+
+/* Quando a resposta não tem imagem */
+.resposta.sem-imagem {
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
 
-/* quando tiver 2 opções */
-.duas {
-    grid-template-columns: repeat(2, 200px);
+
+.resposta.sem-imagem p {
+    margin: 0;
 }
 
-/* quando tiver 4 opções */
-.quatro {
-    grid-template-columns: repeat(2, 200px);
+
+/* Responsivo */
+@media (max-width: 768px) {
+    body {
+        overflow: auto;
+    }
+
+
+    .tela {
+        min-height: 100vh;
+        height: auto;
+        padding: 15px;
+    }
+
+
+    .painel-jogo {
+        padding: 25px 18px;
+    }
+
+
+    #respostas.duas,
+    #respostas.tres,
+    #respostas.quatro {
+        grid-template-columns: 1fr;
+    }
+
+
+    .resposta {
+        width: min(100%, 360px);
+        margin: 0 auto;
+    }
+
+
+    .botao-jogo {
+        min-width: 180px;
+        font-size: 22px;
+    }
 }
