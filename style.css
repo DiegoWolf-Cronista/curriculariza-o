@@ -39,6 +39,33 @@ body {
     position: relative;
 }
 
+.topo-quiz {
+    position: relative;
+    z-index: 3;
+    margin-bottom: -200px; 
+    display: flex;
+    justify-content: center;
+}
+
+.img-topo-quiz {
+    
+    object-fit: contain;
+    position: relative;
+    width: 700px;
+    
+}
+.painel-quiz {
+    position: relative;
+    z-index: 1;
+}
+
+.tela-quiz {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    padding-top: 20px;
+}
 
 /* Tela ativa aparece como flex */
 .tela.ativa {
@@ -111,7 +138,7 @@ body {
 
 /* Painel da pergunta um pouco maior */
 .painel-quiz {
-    width: min(95%, 1000px);
+    width: min(95%, 980px);
 }
 
 
@@ -291,12 +318,32 @@ input:focus {
     margin: 10px 0 0 0;
 }
 
+.img-pergunta {
+    width: 100%;
+    max-width: 500px;
+
+    height: 260px;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin: 0 auto 25px auto;
+
+    border-radius: 20px;
+
+    border: 5px solid #8b4a16;
+
+    background: white;
+
+    padding: 10px;
+}
 
 /* Imagem dentro da resposta */
 .img-resposta {
     width: 100%;
     height: 160px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 16px;
     display: block;
     border: 3px solid #ffffff;
