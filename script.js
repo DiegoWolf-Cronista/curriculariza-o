@@ -37,7 +37,7 @@ const perguntas = [
 
         respostas: [
             { texto: "Fazendeiro",imagem:"imagens/imgQuestao1LetraA.jpeg", correta: false },
-            { texto: "Maximilian von Schneeburg", imagem:"imagens/imgQuestao1LetraB.png", correta: true }
+            { texto: "Maximilian von Schneeburg", imagem:"imagens/imgArrumada.png", correta: true }
         ]
     },
     {
