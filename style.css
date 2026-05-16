@@ -67,9 +67,6 @@ body {
     overflow: hidden;
 }
 
-/* =====================
-   TELAS
-===================== */
 .tela {
     display: none;
     width: 100vw;
@@ -84,6 +81,71 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
+}
+
+/* Tela do vídeo */
+.tela-video {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,0.85);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+}
+
+/* Vídeo menor */
+.video-intro {
+    width: min(900px, 85vw);
+    max-height: 80vh;
+
+    border-radius: 25px;
+
+    border: 6px solid #ffffff;
+
+    box-shadow: 0 0 30px rgba(0,0,0,0.6);
+
+    object-fit: cover;
+}
+
+/* Botão de pular */
+.botao-pular {
+    position: absolute;
+
+    bottom: 40px;
+    right: 40px;
+
+    padding: 14px 24px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: #1fa83a;
+    color: white;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+.botao-pular:hover {
+    transform: scale(1.05);
+}
+
+.video-fullscreen {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 9999;
+    background: black;
 }
 
 .tela.ativa {
@@ -110,9 +172,7 @@ body {
 .tela-feedback{ background-image: url("imagens/imgCertoErrado.png"); }
 .tela-final   { background-image: url("imagens/imgFinalJogo.png"); }
 
-/* =====================
-   TELA QUIZ — layout vertical com Patu por cima
-===================== */
+
 .tela-quiz {
     flex-direction: column;
     align-items: center;
@@ -122,42 +182,40 @@ body {
     overflow-y: auto;
 }
 
-/* ---- Personagem em cima do quadro ---- */
+
 .topo-quiz {
     position: relative;
     z-index: 3;
-    /* Puxa o personagem para baixo, sobrepondo o topo do painel */
+
     margin-bottom: -80px;
     display: flex;
     justify-content: center;
-    /* Impede que o personagem empurre o layout */
+
     pointer-events: none;
 }
 
 .img-topo-quiz {
-    /* Largura responsiva: grande em desktop, menor em mobile */
+
     width: clamp(160px, 28vw, 420px);
     object-fit: contain;
-    /* Desloca levemente para a direita simulando "debruçado" */
+
     transform: translateX(8%) rotate(2deg);
-    /* Garante que o personagem fique na frente do painel */
+
     position: relative;
     z-index: 3;
     filter: drop-shadow(4px 8px 10px rgba(0,0,0,0.35));
 }
 
-/* ---- Painel de perguntas ---- */
+
 .painel-quiz {
     position: relative;
     z-index: 2;
-    /* Espaço extra no topo para acomodar o personagem sobreposto */
+
     padding-top: 50px !important;
     width: min(95%, 980px);
 }
 
-/* =====================
-   PAINEL GERAL (placa de jogo)
-===================== */
+
 .conteudo-jogo,
 .painel-jogo {
     position: relative;
@@ -239,9 +297,7 @@ body {
     font-size: 1.2em;
 }
 
-/* =====================
-   TEXTOS
-===================== */
+
 h1 {
     font-size: clamp(38px, 6vw, 80px);
     color: #fff6c7;
@@ -260,9 +316,7 @@ h2 {
     line-height: 1.3;
 }
 
-/* =====================
-   INPUTS
-===================== */
+
 input {
     width: min(90%, 420px);
     display: block;
@@ -287,9 +341,7 @@ input:focus {
     box-shadow: 0 0 0 4px rgba(31, 168, 58, 0.25);
 }
 
-/* =====================
-   BOTÃO PRINCIPAL
-===================== */
+
 .botao-jogo {
     min-width: 220px;
     padding: 18px 35px;
@@ -330,17 +382,13 @@ input:focus {
         0 8px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* =====================
-   TELA INICIAL
-===================== */
+
 .inicio-conteudo {
     margin-top: auto;
     margin-bottom: 70px;
 }
 
-/* =====================
-   IMAGEM DA PERGUNTA
-===================== */
+
 .img-pergunta {
     width: 100%;
     max-width: 480px;
@@ -354,9 +402,7 @@ input:focus {
     padding: 8px;
 }
 
-/* =====================
-   GRID DE RESPOSTAS
-===================== */
+
 #respostas {
     display: grid;
     gap: 16px;
@@ -431,9 +477,6 @@ input:focus {
     margin: 0;
 }
 
-/* =====================
-   TELA FINAL — destaques
-===================== */
 .nome-resultado {
     font-size: 1.2em;
     color: #0b6d1e;
@@ -450,9 +493,7 @@ input:focus {
     max-width: 700px;
 }
 
-/* =====================
-   RESPONSIVO — TABLET (max 900px)
-===================== */
+
 @media (max-width: 900px) {
     .img-topo-quiz {
         width: clamp(130px, 30vw, 280px);
@@ -467,9 +508,6 @@ input:focus {
     }
 }
 
-/* =====================
-   RESPONSIVO — CELULAR (max 600px)
-===================== */
 @media (max-width: 600px) {
     body {
         overflow-y: auto;
@@ -546,9 +584,7 @@ input:focus {
     }
 }
 
-/* =====================
-   RESPONSIVO — MUITO PEQUENO (max 380px)
-===================== */
+
 @media (max-width: 380px) {
     .img-topo-quiz {
         width: 90px;

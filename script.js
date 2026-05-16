@@ -29,7 +29,6 @@ function pararAudios() {
     somErro.currentTime = 0;
 }
 
-
 const perguntas = [
     {
         pergunta: "Quem foi o fundador de Brusque?",
@@ -206,7 +205,35 @@ function trocarTela(id) {
 
 // INICIAR
 function iniciarJogo() {
+
     trocarTela("login");
+
+    const video = document.getElementById("videoIntro");
+    const telaVideo = document.getElementById("telaVideo");
+
+    telaVideo.style.display = "flex";
+
+    video.currentTime = 0;
+
+    video.muted = false;
+    video.volume = 1;
+
+    video.play();
+
+    video.onended = () => {
+        telaVideo.style.display = "none";
+    };
+}
+
+function pularVideo() {
+
+    const video = document.getElementById("videoIntro");
+    const telaVideo = document.getElementById("telaVideo");
+
+    video.pause();
+    video.currentTime = 0;
+
+    telaVideo.style.display = "none";
 }
 
 
@@ -317,6 +344,7 @@ function mostrarPergunta() {
 }
 
 
+
 // VERIFICAR RESPOSTA
 function verificarResposta(acertou) {
 
@@ -335,6 +363,7 @@ function verificarResposta(acertou) {
 
     } else {
 
+        pararAudios(); 
         somErro.currentTime = 0 ;
         somErro.play();
 

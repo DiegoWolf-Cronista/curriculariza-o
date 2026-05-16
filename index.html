@@ -15,6 +15,18 @@
     </div>
 </div>
 
+<div id="telaVideo" class="tela-video" style="display:none;">
+
+    <video id="videoIntro" class="video-intro">
+        <source src="videos/video.mp4" type="video/mp4">
+    </video>
+
+    <button class="botao-pular" onclick="pularVideo()">
+        Pular ▶
+    </button>
+
+</div>
+
 
 <!-- LOGIN -->
 <div id="login" class="tela tela-login">
@@ -24,7 +36,6 @@
         <input type="text" id="nome" placeholder="Seu nome">
         <input type="text" id="escola" placeholder="Sua escola">
         <input type="number" id="idade" placeholder="Sua idade">
-
 
         <button class="botao-jogo" onclick="comecar()">Entrar na aventura</button>
     </div>
@@ -47,8 +58,8 @@
         <div id="respostas"></div>
 
         
-                <button id="botaoAudio" class="botao-audio">
-                <span class="icone-audio">Áudio🔊</span>
+            <button id="botaoAudio" class="botao-audio">
+            <span class="icone-audio">Áudio🔊</span>
                 Ouvir
             </button>
 
