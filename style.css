@@ -584,6 +584,12 @@ input:focus {
     }
 }
 
+#telaFase {
+    background-image: url("imagens/imgPassaNivel.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 @media (max-width: 380px) {
     .img-topo-quiz {

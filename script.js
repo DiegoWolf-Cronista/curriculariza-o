@@ -5,6 +5,26 @@ let somAcerto = new Audio("audios/certa.mp3");
 let somErro = new Audio("audios/errada.mp3");
 let audioPergunta = new Audio();
 
+let audioFase = new Audio();
+
+const fases = [
+    {
+        titulo: "Nível Fácil",
+        imagem: "imagens/imgLogin.png",
+        audio: "audios/nivelFacil.mp3"
+    },
+    {
+        titulo: "Nível Médio",
+        imagem: "imagens/imgLogin.png",
+        audio: "audios/nivelMedio.mp3"
+    },
+    {
+        titulo: "Nível Difícil",
+        imagem: "imagens/imgLogin.png",
+        audio: "audios/nivelDificil.mp3"
+    }
+];
+
 const fundosQuiz = [
     "imagens/imgPerguntasFundo.png",
     "imagens/cen2.png",
@@ -29,27 +49,7 @@ function pararAudios() {
     somErro.currentTime = 0;
 }
 
-const perguntas = [
-    {
-        pergunta: "Quem foi o fundador de Brusque?",
-
-        audio: "audios/per1.mp3",
-
-        respostas: [
-            { texto: "Fazendeiro",imagem:"imagens/imgQuestao1LetraA.jpeg", correta: false },
-            { texto: "Maximilian von Schneeburg", imagem:"imagens/imgArrumada.png", correta: true }
-        ]
-    },
-    {
-        pergunta: "Brusque é conhecida por produzir o quê?",
-
-        audio: "audios/per2.mp3",
-
-        respostas: [
-            { texto: "Sapatos",imagem:"imagens/imgquetao2letraA.png", correta: false },
-            { texto: "Roupas e tecidos", imagem:"imagens/imgQuestao2LetraB.png", correta: true }
-        ]
-    },
+const perguntas = [  
     {
         pergunta: "Qual personagem faz parte da Fenarreco?",
 
@@ -60,18 +60,6 @@ const perguntas = [
         respostas: [
             { texto: "Pelznickel", imagem:"imagens/imgQuestao3LetraA.png", correta: false },
             { texto: "Marrequinho", imagem:"imagens/imgQuestao3LetraB.png", correta: true }
-        ]
-    },
-    {
-        pergunta: "Em qual estado fica Brusque?",
-
-        audio: "audios/per4.mp3",
-
-        imagemPergunta: "imagens/imgQuestao4.png",
-
-        respostas: [
-            { texto: "Santa Catarina", correta: true },
-            { texto: "Paraná", correta: false }
         ]
     },
     {
@@ -97,13 +85,43 @@ const perguntas = [
         ]
     },
     {
-        pergunta: "Qual instituição fica em Brusque?",
+        pergunta: "Onde ficam muitas estátuas em Brusque?",
 
-        audio: "audios/per7.mp3",
+        audio: "audios/per14.mp3",
 
         respostas: [
-            { texto: "UNIFEBE", imagem:"imagens/imgQuestao7LetraA.png", correta: true },
-            { texto: "UFSC", imagem:"imagens/imgQuestao7LetraB.png", correta: false }
+            { texto: "Havan", imagem:"imagens/imgQuestao14LetraA.png", correta: false },
+            { texto: "Parque das Esculturas", imagem:"imagens/imgQuestao14LetraB.png", correta: true }
+        ]
+    },
+    {
+        pergunta: "Brusque é conhecida por produzir o quê?",
+
+        audio: "audios/per2.mp3",
+
+        respostas: [
+            { texto: "Sapatos",imagem:"imagens/imgquetao2letraA.png", correta: false },
+            { texto: "Roupas e tecidos", imagem:"imagens/imgQuestao2LetraB.png", correta: true }
+        ]
+    },
+        {
+        pergunta: "Quem foi o fundador de Brusque?",
+
+        audio: "audios/per1.mp3",
+
+        respostas: [
+            { texto: "Fazendeiro",imagem:"imagens/imgQuestao1LetraA.jpeg", correta: false },
+            { texto: "Maximilian von Schneeburg", imagem:"imagens/imgArrumada.png", correta: true }
+        ]
+    },  
+    {
+        pergunta: "Qual lugar tem muitos animais para visitar?",
+
+        audio: "audios/per13.mp3",
+
+        respostas: [
+            { texto: "Zoo Botânico", imagem:"imagens/imgQuestao13LetraA.png", correta: true },
+            { texto: "Shopping", imagem:"imagens/imgQuestao13LetraB.png", correta: false }
         ]
     },
     {
@@ -117,17 +135,6 @@ const perguntas = [
         ]
     },
     {
-        pergunta: "Qual é uma comida típica de Brusque?",
-
-        audio: "audios/per9.mp3",
-
-        respostas: [
-            { texto: "Sushi", imagem:"imagens/imgQuestao9LetraA.png", correta: false },
-            { texto: "Cuca", imagem:"imagens/imgQuestao9LetraB.png", correta: true },
-            { texto: "Hot-dog", imagem:"imagens/imgQuestao9LetraC.png", correta: false }
-        ]
-    },
-    {
         pergunta: "Essa é a entrada do Parque Zoobotânico de Brusque?",
 
         imagemPergunta: "imagens/imgQuestao10.png",
@@ -137,6 +144,16 @@ const perguntas = [
         respostas: [
             { texto: "Verdadeiro", correta: true },
             { texto: "Falso", correta: false }
+        ]
+    },
+        {
+        pergunta: "Qual imagem mostra o telescópio do parque?",
+
+        audio: "audios/per15.mp3",
+
+        respostas: [
+            { texto:"A) ",imagem:"imagens/imgQuestao15LetraA.png", correta: true },
+            { texto:"B)",imagem:"imagens/img15B.png", correta: false }
         ]
     },
     {
@@ -164,33 +181,36 @@ const perguntas = [
         ]
     },
     {
-        pergunta: "Qual lugar tem muitos animais para visitar?",
+        pergunta: "Qual é uma comida típica de Brusque?",
 
-        audio: "audios/per13.mp3",
+        audio: "audios/per9.mp3",
 
         respostas: [
-            { texto: "Zoo Botânico", imagem:"imagens/imgQuestao13LetraA.png", correta: true },
-            { texto: "Shopping", imagem:"imagens/imgQuestao13LetraB.png", correta: false }
+            { texto: "Sushi", imagem:"imagens/imgQuestao9LetraA.png", correta: false },
+            { texto: "Cuca", imagem:"imagens/imgQuestao9LetraB.png", correta: true },
+            { texto: "Hot-dog", imagem:"imagens/imgQuestao9LetraC.png", correta: false }
         ]
     },
     {
-        pergunta: "Onde ficam muitas estátuas em Brusque?",
+        pergunta: "Em qual estado fica Brusque?",
 
-        audio: "audios/per14.mp3",
+        audio: "audios/per4.mp3",
+
+        imagemPergunta: "imagens/imgQuestao4.png",
 
         respostas: [
-            { texto: "Havan", imagem:"imagens/imgQuestao14LetraA.png", correta: false },
-            { texto: "Parque das Esculturas", imagem:"imagens/imgQuestao14LetraB.png", correta: true }
+            { texto: "Santa Catarina", correta: true },
+            { texto: "Paraná", correta: false }
         ]
     },
     {
-        pergunta: "Qual imagem mostra o telescópio do parque?",
+        pergunta: "Qual instituição fica em Brusque?",
 
-        audio: "audios/per15.mp3",
+        audio: "audios/per7.mp3",
 
         respostas: [
-            { texto:"A) ",imagem:"imagens/imgQuestao15LetraA.png", correta: true },
-            { texto:"B)",imagem:"imagens/img15B.png", correta: false }
+            { texto: "UNIFEBE", imagem:"imagens/imgQuestao7LetraA.png", correta: true },
+            { texto: "UFSC", imagem:"imagens/imgQuestao7LetraB.png", correta: false }
         ]
     }
 ];
@@ -200,6 +220,35 @@ const perguntas = [
 function trocarTela(id) {
     document.querySelectorAll(".tela").forEach(t => t.classList.remove("ativa"));
     document.getElementById(id).classList.add("ativa");
+}
+
+function mostrarFase(indiceFase) {
+
+    const fase = fases[indiceFase];
+
+    document.getElementById("tituloFase").innerText =
+        fase.titulo;
+
+    document.getElementById("imagemFase").src =
+        fase.imagem;
+
+    audioFase.pause();
+    audioFase.currentTime = 0;
+
+    audioFase.src = fase.audio;
+    audioFase.play();
+
+    trocarTela("telaFase");
+}
+
+function iniciarFase() {
+
+    audioFase.pause();
+    audioFase.currentTime = 0;
+
+    mostrarPergunta();
+
+    trocarTela("quiz");
 }
 
 
@@ -250,8 +299,7 @@ function comecar() {
     acertos = 0;
 
 
-    mostrarPergunta();
-    trocarTela("quiz");
+    mostrarFase(0);
 }
 
 
@@ -378,16 +426,31 @@ function verificarResposta(acertou) {
 
 // PRÓXIMA
 function proximaPergunta() {
+
     pararAudios();
+
     audioPergunta.pause();
     audioPergunta.currentTime = 0;
+
     perguntaAtual++;
 
+    if (perguntaAtual === 5) {
+        mostrarFase(1);
+        return;
+    }
+
+    if (perguntaAtual === 10) {
+        mostrarFase(2);
+        return;
+    }
 
     if (perguntaAtual < perguntas.length) {
+
         mostrarPergunta();
         trocarTela("quiz");
+
     } else {
+
         mostrarResultadoFinal();
     }
 }
